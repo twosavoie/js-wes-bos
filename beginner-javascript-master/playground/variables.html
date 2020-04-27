@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Variables!</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <script>
+    // function scoped
+    var first = 'wes'; 
+      //can be updated // first = 'suzy'; //don't redeclare variable so not var first = 'suzy';
+      // var first; (and then set the variable later)
+      //Wes rarely uses var
+    // block scoped {}
+    let age = 300; //can be updated
+    let cool = true;
+      //if changing variable Wes uses let
+
+    const Dog = 'bowser'; //const is constant //cannot be updated so a variable that you don't want to change (?is this where state comes in?)
+
+    // camel case
+    const iLovePizza = true; //Wes prefers
+    // UpperCamelCase
+    const ILoveToEatHotDogs = false; //save uppercase for Classes
+    // snake case!!
+    const this_is_snake_case = 'cool'; //dashes not allowed "kabab case" //php devs like
+    const $$$$ = 100; //associated with jQuery
+    const _name = 'Lisa'; //associated with lodash
+      //Wes uses const by default (rather than var or let)
+    
+
+      // cmd + / will comment out highlighted code
+      // 'use strict'; will require dev to declare variables (bkwd compatibility let dev write bad, undeclared code except in modules)
+    
+
+
+  </script>
+</body>
+
+</html>
