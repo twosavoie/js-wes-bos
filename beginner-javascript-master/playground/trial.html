@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="./some.js"></script> <!-- can run but if also running html, needs to be farther down -->
-    <!-- WordPress sites often put in head --><!-- async defer --><!-- can't run anything inside src -->
+    <!-- WordPress sites often put in head -->
+    <!-- async defer -->
+    <!-- can't run anything inside src -->
 </head>
+
 <body>
     <p>Howdie</p>
 
     <!-- script must be below what it selects. Has to load the p before it can select p-->
     <script>
-        console.log("Hi");
-    //    const p = document.querySelector('p');
+        console.log('Hi');
+//    const p = document.querySelector('p');
     </script>
     <script src="./some.js"></script>
 </body>
+
 </html>
