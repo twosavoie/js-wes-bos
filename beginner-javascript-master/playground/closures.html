@@ -9,6 +9,9 @@
 </head>
 
 <body>
+  <!-- The ability to access a parent level scope from a child scope even after the parent function is terminated. -->
+  <!-- The return of the function is not garbage collected but instead stored and is accessible when running the child function -->
+  <!-- Allows you to reuse the parent function with different children functions (different greetings, different games....) -->
   <script>
     // function outer() {
     //   const outerVar = 'Hey I am the outer Var!';
@@ -27,7 +30,7 @@
       const myGreet = greeting.toUpperCase();
       return function (name) {
         return `${myGreet} ${name}`;
-      }
+      };
     }
 
     const sayHello = createGreeting('hello');
@@ -36,19 +39,16 @@
     console.log(sayHello('kait'));
     console.log(sayHey('kait'));
 
-
     function createGame(gameName) {
       let score = 0;
       return function win() {
         score++;
         return `Your name ${gameName} score is ${score}`;
-      }
+      };
     }
 
     const hockeyGame = createGame('Hockey');
     const soccerGame = createGame('Soccer');
-
-
   </script>
 </body>
 

@@ -1,3 +1,6 @@
+// JS "hoists" the (regular) function or variable declarations (but not values) to the top of file. Better to define functions then use them or use modules and import into file.
+// some people prefer to have "What does this file do" and then "How does this file do it?"
+
 /* esline-disable */
 let age;
 console.log(age);
