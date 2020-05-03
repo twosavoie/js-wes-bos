@@ -14,3 +14,7 @@ const myHTML = `
 const myFragment = document.createRange().createContextualFragment(myHTML);
 
 document.body.appendChild(myFragment);
+// security concern - if ask for name and feeding that into your function, they can instead write html and that will be added to the DOM
+// they can also add style tags - but could display: none or something else.
+// XSS they use script tags and then can write functions - very bad
+// the security video will show solution
