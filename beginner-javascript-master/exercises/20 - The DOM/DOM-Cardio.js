@@ -42,15 +42,18 @@ const myHTML = `
     <p>x</p>
   </div>
 `;
-myHTML.innerHTML = myHTML;
-// myDiv.innerHTML = myHTML; this doesn't work - replace ul & img with this div
-// const myFragment = document.createRange().createContextualFragment(myHTML); - couldn't get this to work???
+// myHTML.innerHTML = myHTML; - this works with myHTML as second parameter in insertAdjacentHTML
+const myHTMLdiv = myHTML;
+myHTMLdiv.innerHTML = myHTMLdiv; // works without this but myHTMLdiv typeof is still a string ???
+// const myFragment = document.createRange().createContextualFragment(myHTML); // couldn't get this to work??? Object document fragment
+// list.insertAdjacentHTML('beforebegin', myFragment);
 
 // put this div before the unordered list from above
-list.insertAdjacentHTML('beforebegin', myHTML);
+list.insertAdjacentHTML('beforebegin', myHTMLdiv);
+
 // add a class to the second paragraph called warning
 const myDiv = div.querySelector('.myDiv');
-myDiv.children[1].classList.add('warning');
+myDiv.children[1].classList.add('warning'); // because first paragraph is [0]
 
 // remove the first paragraph
 myDiv.firstElementChild.remove();
