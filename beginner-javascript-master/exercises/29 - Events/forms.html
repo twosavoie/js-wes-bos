@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="../../base.css">
 </head>
 
+<!-- including values means you don't have to keep entering form details!!! -->
+<!-- accessibility: properly written html will be accessible. But then JS devs can add event listeners that block accessibility -->
+
 <body>
   <div class="wrapper">
     <a class="wes" href="https://wesbos.com">Wes Bos</a>
@@ -16,7 +19,7 @@
       <input type="text" id="name" name="name" value="Wes Bos">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" value="wesbos@gmail.com">
-      <input type="checkbox" id="agree" name="agree">
+      <input required type="checkbox" id="agree" name="agree"> <!-- required -->
       <label for="agree">I agree to the terms and conditions</label>
       <hr>
       <button type="submit">Submit</button>
