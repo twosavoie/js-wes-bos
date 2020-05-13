@@ -1,3 +1,4 @@
+// Write the pseudocode so that it gives you an outline of how to proceed
 // Select the elements on the page - canvas, shake button
 const canvas = document.querySelector('#etch-a-sketch');
 const ctx = canvas.getContext('2d');
