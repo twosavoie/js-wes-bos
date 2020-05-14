@@ -81,6 +81,7 @@
       width: 100%;
     }
 
+    /* show modal */
     .modal-outer.open {
       opacity: 1;
       pointer-events: all;
@@ -93,10 +94,12 @@
       border-radius: 5px;
       min-height: 200px;
       background: white;
+      /* animate inner modal */
       transform: translateY(-200%);
       transition: transform 2s;
     }
 
+    /* animate inner modal */
     .modal-outer.open .modal-inner {
       transform: translateY(0);
     }
