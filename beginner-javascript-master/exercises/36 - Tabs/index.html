@@ -12,7 +12,9 @@
 <body>
   <div class="wrapper">
     <div class="tabs">
+      <!-- role & aria label make this accessible -->
       <div role="tablist" aria-label="Programming Languages">
+        <!-- aria-selected true or false determines which one is active -->
         <button role="tab" aria-selected="true" id="js">
           JavaScript
         </button>
@@ -25,6 +27,8 @@
       <div role="tabpanel" aria-labelledby="js">
         <p>JavaScript is great!</p>
       </div>
+      <!-- hidden attribute hides the element without further markup -->
+      <!-- will use JS to add/remove hidden -->
       <div role="tabpanel" aria-labelledby="ruby" hidden>
         <p>Ruby is great</p>
       </div>
